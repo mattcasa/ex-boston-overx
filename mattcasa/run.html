@@ -18,6 +18,7 @@
 <input id='salary' type="text" value="1000">
 <button onclick="count()">Search</button><br>
 <div id="output"></div>
+<div id="output1"></div>
 
 
 <script>
@@ -32,9 +33,13 @@ function count(){
 
 	// get salaries larger than given salary
 	var bigger = exercise.findBiggerSalaries();
+	//console.log("Number salaries above input is "+bigger);
+
+	var bool = exercise.largerSalary(10000);
+	document.getElementById('output1').innerHTML = bool;
 
 	// write result to the output div
-	document.getElementById('output').innerHTML = bigger.length;
+	document.getElementById('output').innerHTML = bigger;
 }
 
 </script>
